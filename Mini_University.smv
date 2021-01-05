@@ -1,0 +1,76 @@
+MODULE main
+VAR
+state : {n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20};
+label : {Name, Inv_Name, Age, Inv_Age, Teaches, Inv_Teaches, Teacher_ID, Inv_Teacher_ID, ID_Code, Inv_ID_Code, Get_Academic_Rank, Inv_Get_Academic_Rank, Rank_ID, Inv_Rank_ID, Course_ID, Inv_Course_ID, Attends, Inv_Attends, Course_Type, Inv_Course_Type, Includes, Inv_Includes, Student_ID, Inv_Student_ID, Enrolls, Inv_Enrolls, Program_ID, Inv_Program_ID};
+value : {Teacher, Marco, 35, 1, 201408, Academic_Rank, 1001, Professor, Course, Database, 2, Mandatory, Student, 4, 20200801, Dave, Program, CSMSc};
+ASSIGN
+init(state) := n1;
+next(state) := case
+state = n1 : {n2, n3, n4, n5, n6, n9};
+state = n2 : n1;
+state = n3 : n1;
+state = n4 : n1;
+state = n5 : n1;
+state = n6 : {n1, n7, n8};
+state = n7 : n6;
+state = n8 : n6;
+state = n9 : {n1, n10, n11, n12, n12, n13, n14, n18};
+state = n10 : n9;
+state = n11 : n9;
+state = n12 : n9;
+state = n13 : n9;
+state = n14 : {n9, n15, n16, n17, n18};
+state = n15 : n14;
+state = n16 : n14;
+state = n17 : n14;
+state = n18 : {n9, n14, n19, n20};
+state = n19 : n18;
+state = n20 : n18;
+TRUE : state;
+esac;
+
+label := case
+state = n1 : {Name, Age, Teaches, ID_Code, Teacher_ID, Get_Academic_Rank};
+state = n2 | state = n8 | state = n10 | state = n17 | state = n20 : Inv_Name;
+state = n3 | state = n16 : Inv_ID_Code;
+state = n4 : Inv_Age;
+state = n5 : Inv_Teacher_ID;
+state = n6 : {Inv_Get_Academic_Rank, Rank_ID, Name};
+state = n7 : Inv_Rank_ID;
+state = n9 : {Inv_Teaches, Name, Course_ID, Course_Type, Teacher_ID, Inv_Includes, Attends};
+state = n11 : Inv_Course_ID;
+state = n12 : Inv_Course_Type;
+state = n13 : Inv_Teacher_ID;
+state = n14 : {Inv_Attends, Student_ID, ID_Code, Name, Enrolls};
+state = n15 : Inv_Student_ID;
+state = n18 : {Includes, Inv_Enrolls, Program_ID, Name};
+state = n19 : Inv_Program_ID;
+TRUE : state;
+esac;
+
+
+value := case
+state = n1 : Teacher;
+state = n2 : Marco;
+state = n3 : 201408;
+state = n4 : 35;
+state = n5 | state= n13 : 1;
+state = n6 : Academic_Rank;
+state = n7 : 1001;
+state = n8 : Professor;
+state = n9 : Course;
+state = n10 : Database;
+state = n11 | state= n19 : 2;
+state = n12 : Mandatory;
+state = n14 : Student;
+state = n15 : 4;
+state = n16 : 20200801;
+state = n17 : Dave;
+state = n18 : Program;
+state = n20 : CSMSc;
+TRUE : state;
+esac;
+
+CTLSPEC (value = Teacher & EF (label = Teaches & EX value = Course))
+CTLSPEC (value = Teacher & EF (label = Teaches & EX value = Program))
+CTLSPEC (value = Teacher & EF (label = Name & EX value = Marco) & EF (label = Get_Academic_Rank & EX value = Academic_Rank) & EF(label = Name & EX value = Professor) & EF(label = Teaches & EX value = Course) & EF(label = Name & EX value = Database) & EF(label = Inv_Includes & EX value = Program) & EF(label = Name & EX value = CSMSc) & EF(label = Inv_Enrolls & EX value = Student) & EF(label = Name & EX value = Dave))
