@@ -1,4 +1,4 @@
-# Consistency checking for learning ontology from Relational Database (CC4OL-RDB)
+# Consistency Checking for Learning Ontology from Relational Database (CC4OL-RDB)
 
 This is a graph-based intermediate model that represent the semantics of RDB and the specifications of learned ontologies.
 - The graph-based intermediate model is encoded by SMV program.
