@@ -16,14 +16,14 @@ This code could be ran [nuXmv](https://nusmv.fbk.eu/) by using model chcker to v
 
 **BibTex**
 
-@Article{info12050188,
-AUTHOR = {Ma, Chuangtao and Molnár, Bálint and Benczúr, András},
-TITLE = {A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database},
-JOURNAL = {Information},
-VOLUME = {12},
-YEAR = {2021},
-NUMBER = {5},
-ARTICLE-NUMBER = {188},
-ISSN = {2078-2489},
-DOI = {10.3390/info12050188}
+@article{info12050188,
+author = {Ma, Chuangtao and Molnár, Bálint and Benczúr, András},
+title = {A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database},
+journal = {Information},
+volume = {12},
+year = {2021},
+number = {5},
+article-number = {188},
+issn = {2078-2489},
+doi = {10.3390/info12050188}
 }
