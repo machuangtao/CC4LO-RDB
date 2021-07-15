@@ -1,4 +1,4 @@
-# A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database (CC4OL-RDB)
+# A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database (CC4LO-RDB)
 
 **Introduction**
 
