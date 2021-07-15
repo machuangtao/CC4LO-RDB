@@ -12,4 +12,16 @@ This model could be ran [nuXmv](https://nusmv.fbk.eu/) by using model chcker to 
 5. check_fsm
 6. check_ctlspec
 
+**BibTex**
 
+@Article{info12050188,
+AUTHOR = {Ma, Chuangtao and Molnár, Bálint and Benczúr, András},
+TITLE = {A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database},
+JOURNAL = {Information},
+VOLUME = {12},
+YEAR = {2021},
+NUMBER = {5},
+ARTICLE-NUMBER = {188},
+ISSN = {2078-2489},
+DOI = {10.3390/info12050188}
+}
