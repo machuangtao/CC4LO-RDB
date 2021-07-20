@@ -14,8 +14,8 @@ This code could be ran [nuXmv](https://nusmv.fbk.eu/) by using model chcker to v
 5. check_fsm
 6. check_ctlspec
 
-**BibTex**
-
+**Citation**
+```
 @article{info12050188,
 author = {Ma, Chuangtao and Molnár, Bálint and Benczúr, András},
 title = {A Semi-Automatic Semantic Consistency-Checking Method for Learning Ontology from Relational Database},
@@ -27,3 +27,4 @@ article-number = {188},
 issn = {2078-2489},
 doi = {10.3390/info12050188}
 }
+```
