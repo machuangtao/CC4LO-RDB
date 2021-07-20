@@ -7,14 +7,14 @@ This is a semi-automatic semantic consistency-checking method for learning ontol
 - The specifications of learned ontologies is formalized by CTL formula.
 
 This code could be ran [nuXmv](https://nusmv.fbk.eu/) by using model chcker to verify whether the learned ontolgies satisfy the RDB model by excuting the following commands:
-1. read_model -i Mini_University.smv
-2. flatten_hierarchy
-3. encode_variables
-4. build_model
-5. check_fsm
-6. check_ctlspec
+1. ``` read_model -i Mini_University.smv ```
+2. ``` flatten_hierarchy ```
+3. ``` encode_variables ```
+4. ``` build_model ```
+5. ``` check_fsm ```
+6. ``` check_ctlspec ```
 
-**Citation**
+**Cite**
 ```
 @article{info12050188,
 author = {Ma, Chuangtao and Molnár, Bálint and Benczúr, András},
